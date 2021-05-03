@@ -32,15 +32,15 @@ const Login = () => {
 
   return (
     <div className="container flex items-center h-screen max-w-screen-md mx-auto">
-      <div className="hidden md:flex md:w-3/5">
+      <div className="hidden md:flex md:justify-center md:items-center md:w-3/5">
         <img
           src="/images/iphone-with-profile.jpeg"
           alt="iPhone with instagram app"
         />
       </div>
       <div className="flex flex-col w-full p-3 md:p-0 md:w-2/5">
-        <div className="flex flex-col items-center p-3 mb-4 bg-white border rounded border-gray-primary">
-          <h1 className="flex justify-center w-full">
+        <div className="flex flex-col items-center p-3 mb-4 bg-white border rounded shadow-md border-gray-primary">
+          <h1 className="flex items-center justify-center w-full">
             <img
               src="/images/logo.png"
               alt="Instagram"
@@ -55,6 +55,7 @@ const Login = () => {
               placeholder="Email address"
               className="w-full h-2 px-4 py-5 mb-2 text-sm border rounded md:mx-0 text-gray-base border-gray-primary"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
             <input
               aria-label="Enter your password"
@@ -62,6 +63,7 @@ const Login = () => {
               placeholder="Password"
               className="w-full h-2 px-4 py-5 mb-2 text-sm border rounded md:mx-0 text-gray-base border-gray-primary"
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
             <button
               disabled={isInvalid}
@@ -74,10 +76,10 @@ const Login = () => {
             </button>
           </form>
         </div>
-        <div className="flex flex-col items-center justify-center w-full p-2 text-gray-700 bg-white border rounded border-gray-primary">
+        <div className="flex flex-col items-center justify-center w-full p-2 text-gray-700 bg-white border rounded shadow-md border-gray-primary">
           <p className="text-sm">
             Don't have an account?{` `}
-            <Link to="/register" className="font-bold text-blue-medium">
+            <Link to={ROUTES.REGISTER} className="font-bold text-blue-medium">
               Sign Up
             </Link>
           </p>
