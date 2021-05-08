@@ -73,7 +73,7 @@ const Register = () => {
         />
       </div>
       <div className="flex flex-col w-full p-3 md:p-0 md:w-2/5">
-        <div className="flex flex-col items-center p-3 mb-4 bg-white border rounded border-gray-primary">
+        <div className="flex flex-col items-center p-3 mb-4 bg-white border rounded shadow-md border-gray-primary">
           <h1 className="flex justify-center w-full">
             <img
               src="/images/logo.png"
@@ -136,7 +136,7 @@ const Register = () => {
             </button>
           </form>
         </div>
-        <div className="flex flex-col items-center justify-center w-full p-2 text-gray-700 bg-white border rounded border-gray-primary">
+        <div className="flex flex-col items-center justify-center w-full p-2 text-gray-700 bg-white border rounded shadow-md border-gray-primary">
           <p className="text-sm">
             If you have an account?{` `}
             <Link to={ROUTES.LOGIN} className="font-bold text-blue-medium">

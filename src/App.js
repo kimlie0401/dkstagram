@@ -6,6 +6,7 @@ import Loader from "./components/loader";
 const Login = lazy(() => import("./pages/login"));
 const Register = lazy(() => import("./pages/register"));
 const Home = lazy(() => import("./pages/home"));
+const NotFound = lazy(() => import("./pages/not-found"));
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         }
       >
         <Switch>
-          <Route path={ROUTES.LOGIN} component={Login} />
-          <Route path={ROUTES.REGISTER} component={Register} />
-          <Route path={ROUTES.DASHBOARD} component={Home} />
+          <Route path={ROUTES.LOGIN} component={Login} exact />
+          <Route path={ROUTES.REGISTER} component={Register} exact />
+          <Route path={ROUTES.DASHBOARD} component={Home} exact />
+          <Route path={ROUTES.NOT_FOUND} component={NotFound} />
         </Switch>
       </Suspense>
     </Router>
